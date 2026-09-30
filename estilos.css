@@ -1,0 +1,619 @@
+/* =========================
+   CONFIGURACIÓN GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #6c9bf1;
+    color: #172333;
+}
+
+a {
+    text-decoration: none;
+}
+
+
+/* =========================
+   PUBLICIDAD PRINCIPAL
+========================= */
+
+.hero {
+    min-height: 100vh;
+    position: relative;
+    overflow: hidden;
+    color: white;
+}
+
+
+/* FOTO DE FONDO */
+
+.fondo {
+    position: absolute;
+    inset: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(10, 25, 40, 0.68),
+            rgba(10, 25, 40, 0.78)
+        ),
+        url("imagenes/fondologo.png");
+
+    background-size: cover;
+    background-position: center;
+
+    z-index: -1;
+}
+
+
+/* =========================
+   BARRA SUPERIOR
+========================= */
+
+.barra {
+    width: 90%;
+    margin: auto;
+
+    padding-top: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+/* LOGO */
+
+.logo {
+    width: 70px;
+    height: 70px;
+
+    border: 3px solid white;
+    border-radius: 50%;
+
+    background-color: rgba(20, 45, 70, 0.9);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    line-height: 1;
+}
+
+.logo span {
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.logo strong {
+    font-size: 25px;
+}
+
+
+/* MENU */
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #70c5ff;
+}
+
+
+/* =========================
+   TEXTO PUBLICITARIO
+========================= */
+
+.publicidad {
+    width: 90%;
+    margin: auto;
+
+    text-align: center;
+
+    padding-top: 8vh;
+    padding-bottom: 60px;
+}
+
+
+.pequeño {
+    font-size: 15px;
+    letter-spacing: 4px;
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+
+/* TITULO */
+
+.publicidad h1 {
+    font-size: clamp(50px, 8vw, 105px);
+
+    line-height: 0.9;
+
+    letter-spacing: -3px;
+
+    margin-bottom: 25px;
+
+    text-shadow: 3px 3px 10px rgba(0,0,0,0.4);
+}
+
+
+/* FRASE */
+
+.frase {
+    font-size: clamp(17px, 2vw, 24px);
+
+    line-height: 1.5;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   FECHA
+========================= */
+
+.fecha {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+
+    position: relative;
+
+    margin: 25px auto;
+
+    width: fit-content;
+}
+
+.fecha span {
+    font-size: 42px;
+    font-weight: bold;
+
+    border-bottom: 4px solid #54b7f5;
+
+    padding: 0 8px;
+}
+
+.fecha small {
+    position: absolute;
+
+    bottom: -23px;
+
+    width: 100%;
+
+    font-size: 12px;
+    letter-spacing: 5px;
+    font-weight: bold;
+}
+
+
+/* =========================
+   DATOS
+========================= */
+
+.datos-principales {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 60px;
+
+    margin-top: 55px;
+}
+
+.datos-principales b {
+    font-size: 13px;
+    letter-spacing: 2px;
+}
+
+.datos-principales p {
+    margin-top: 8px;
+
+    font-size: 18px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+.boton {
+    display: inline-block;
+
+    margin-top: 35px;
+
+    padding: 16px 28px;
+
+    background-color: #1687d4;
+
+    color: white;
+
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.boton:hover {
+    background-color: #0d659f;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   BIENVENIDA
+========================= */
+
+.bienvenida {
+    width: 80%;
+
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+
+    padding: 90px 0;
+}
+
+.etiqueta {
+    color: #1687d4;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.bienvenida h2 {
+    font-size: 45px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+}
+
+.bienvenida h2 span {
+    color: #1687d4;
+}
+
+.bienvenida > p:last-child {
+    color: #5d6772;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+}
+
+
+/* =========================
+   SECCIÓN PUESTOS
+========================= */
+
+.puestos {
+    background-color: #e8edf2;
+
+    padding: 80px 7%;
+}
+
+.titulo-seccion {
+    text-align: center;
+
+    margin-bottom: 45px;
+}
+
+.titulo-seccion h2 {
+    font-size: 40px;
+}
+
+
+/* TARJETAS */
+
+.tarjetas {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.tarjeta {
+    background-color: white;
+
+    min-height: 310px;
+
+    padding: 28px;
+
+    border-radius: 10px;
+
+    position: relative;
+
+    box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+
+/* NUMERO */
+
+.numero {
+    color: #c8d1da;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+}
+
+
+/* ICONO */
+
+.icono {
+    font-size: 40px;
+
+    margin-bottom: 20px;
+}
+
+
+.tarjeta h3 {
+    font-size: 23px;
+
+    margin-bottom: 15px;
+}
+
+.tarjeta p {
+    color: #69737d;
+
+    line-height: 1.5;
+
+    font-size: 15px;
+}
+
+.tarjeta a {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: #1687d4;
+
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   SECCIÓN FINAL
+========================= */
+
+.final {
+    background-color: #142536;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 100px 10%;
+}
+
+.final .etiqueta {
+    color: #62bdf3;
+}
+
+.final h2 {
+    font-size: clamp(50px, 7vw, 90px);
+
+    line-height: 0.95;
+
+    margin-bottom: 25px;
+}
+
+.final h2 span {
+    color: #55b7ee;
+}
+
+.final p {
+    font-size: 18px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: #0c1722;
+
+    color: #aeb9c4;
+
+    text-align: center;
+
+    padding: 35px 10%;
+
+    line-height: 1.7;
+}
+
+.logo-footer {
+    color: white;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin-bottom: 10px;
+}
+
+.logo-footer strong {
+    color: #55b7ee;
+}
+
+
+/* =========================
+   CELULAR
+========================= */
+
+@media (max-width: 800px) {
+
+    .hero {
+        min-height: auto;
+    }
+
+    .barra {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    nav {
+        gap: 18px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .publicidad {
+        padding-top: 60px;
+    }
+
+    .publicidad h1 {
+        letter-spacing: -1px;
+    }
+
+    .datos-principales {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .bienvenida h2 {
+        font-size: 35px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .barra {
+        width: 90%;
+    }
+
+    .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .logo strong {
+        font-size: 21px;
+    }
+
+    .publicidad {
+        width: 92%;
+
+        padding-top: 50px;
+    }
+
+    .pequeño {
+        font-size: 11px;
+
+        letter-spacing: 2px;
+    }
+
+    .publicidad h1 {
+        font-size: 48px;
+    }
+
+    .frase {
+        font-size: 16px;
+    }
+
+    .fecha {
+        gap: 8px;
+    }
+
+    .fecha span {
+        font-size: 32px;
+    }
+
+    .datos-principales p {
+        font-size: 16px;
+    }
+
+    .bienvenida {
+        width: 88%;
+
+        padding: 65px 0;
+    }
+
+    .bienvenida h2 {
+        font-size: 32px;
+    }
+
+    .puestos {
+        padding: 60px 7%;
+    }
+
+    .titulo-seccion h2 {
+        font-size: 32px;
+    }
+
+    .tarjetas {
+        grid-template-columns: 1fr;
+    }
+
+    .final {
+        padding: 80px 8%;
+    }
+
+    .final h2 {
+        font-size: 55px;
+    }
+
+}
